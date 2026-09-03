@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "experience": "Esperienza",
+    "projects": "Progetti",
+    "education": "Formazione",
+    "contact": "Contatti",
+    "contactMe": "Contattami",
+    "skipToContent": "Salta al contenuto principale"
+  },
+  "hero": {
+    "availability": "Disponibile per nuove collaborazioni",
+    "greeting": "Ciao, sono",
+    "description": "Costruisco interfacce moderne e scalabili con Angular e uso strumenti di sviluppo assistito da AI per migliorare velocità di consegna e qualità del codice.",
+    "experienceCta": "Guarda la mia esperienza",
+    "scroll": "Scorri"
+  },
+  "about": {
+    "label": "01 - Chi sono",
+    "title": "Profilo professionale",
+    "years": "Anni di esperienza",
+    "projects": "Aziende / progetti chiave",
+    "technologies": "Tecnologie principali",
+    "profile": {
+      "summary": "Sviluppo applicazioni web dal 2019, con specializzazione in Angular e TypeScript e nelle funzionalità più recenti del framework, tra cui Signals e Standalone Components. Ho lavorato come sviluppatore e team lead su progetti fintech e piattaforme cloud, occupandomi di architettura, sviluppo, qualità del codice e collaborazione con clienti e stakeholder. Uso Cursor, Antigravity, Copilot, Claude Code e OpenCode nel lavoro quotidiano, insieme a skills personalizzate e server MCP per scrivere, rifattorizzare e documentare codice coerente con l'architettura del progetto."
+    }
+  },
+  "skills": {
+    "label": "02 - Competenze",
+    "title": "Stack tecnologico",
+    "groups": {
+      "frontend": {
+        "title": "Frontend & Framework",
+        "items": {
+          "angular": "Angular",
+          "typescript": "TypeScript",
+          "signals": "Signals",
+          "standalone": "Standalone Components",
+          "changeDetection": "Change Detection",
+          "rxjs": "RxJS",
+          "state": "NgRx / Redux",
+          "react": "React"
+        }
+      },
+      "ui": {
+        "title": "UI & Librerie",
+        "items": {
+          "html": "HTML5",
+          "css": "CSS3",
+          "scss": "SCSS",
+          "tailwind": "Tailwind CSS",
+          "material": "Angular Material",
+          "primeng": "PrimeNG",
+          "bootstrap": "Bootstrap",
+          "mui": "MUI",
+          "devexpress": "DevExpress"
+        }
+      },
+      "testing": {
+        "title": "Testing & Qualità",
+        "items": {
+          "cypress": "Cypress E2E",
+          "karma": "Karma / Jasmine",
+          "review": "Code Review",
+          "refactoring": "Refactoring"
+        }
+      },
+      "backend": {
+        "title": "Backend",
+        "items": {
+          "rest": "REST API",
+          "node": "Node.js",
+          "express": "Express.js",
+          "socket": "Socket.IO",
+          "mysql": "MySQL"
+        }
+      },
+      "ai": {
+        "title": "AI-Assisted Development",
+        "items": {
+          "cursor": "Cursor",
+          "antigravity": "Antigravity",
+          "copilot": "Copilot",
+          "claude": "Claude Code",
+          "opencode": "OpenCode",
+          "skills": "Custom Skills",
+          "mcp": "MCP Servers"
+        }
+      },
+      "methods": {
+        "title": "Metodologie",
+        "items": {
+          "scrum": "Scrum / Agile",
+          "cicd": "CI/CD",
+          "microfrontend": "Micro-Frontend",
+          "leadership": "Team Leadership",
+          "mentoring": "Mentoring Tecnico"
+        }
+      }
+    }
+  },
+  "experience": {
+    "label": "03 - Esperienza",
+    "title": "Percorso professionale",
+    "items": {
+      "orbyta": {
+        "role": "Senior IT Consultant - Frontend & Application Architecture",
+        "company": "Orbyta Tech",
+        "period": "2025 - Oggi",
+        "description": "Consulenza frontend per applicazioni web moderne. Lavoro con Angular, Signals, RxJS, NgRx, PrimeNG, Tailwind e Bootstrap, definisco l'architettura insieme al cliente e gestisco priorità e consegna. Integro backend Java e funzionalità real-time tramite STOMP. Uso inoltre Cursor, OpenCode, server MCP e skills per scrittura, revisione e refactoring del codice."
+      },
+      "scai": {
+        "role": "Senior Frontend Developer & Team Lead",
+        "company": "SCAI Tecno",
+        "period": "2023 - 2025",
+        "description": "Ho guidato il team frontend nello sviluppo di un'applicazione per la gestione del recupero crediti con architettura Micro-Frontend. Ho lavorato con Angular, RxJS, PrimeNG e Bootstrap e aggiunto test end-to-end con Cypress sui flussi principali, riducendo il rischio di regressioni durante i rilasci. Mi sono occupato anche di mentoring tecnico, code review e allineamento con gli obiettivi di business in un contesto Agile."
+      },
+      "acca": {
+        "role": "Full Stack Developer",
+        "company": "ACCA Software S.p.A.",
+        "period": "2019 - 2023",
+        "description": "Ho sviluppato il frontend Angular e RxJS di usBIM.com, un'applicazione Kanban per la gestione dei workflow, usando Angular Material e DevExpress. Ho integrato API REST con Node.js ed Express.js, realizzato funzionalità real-time con Socket.IO e lavorato con MySQL per la persistenza dei dati in un contesto Agile."
+      }
+    }
+  },
+  "projects": {
+    "label": "04 - Progetti",
+    "title": "Progetti personali",
+    "angular": {
+      "description": "Un boilerplate Angular riutilizzabile che dimostra Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO e testing in un'applicazione funzionante."
+    },
+    "requestLock": {
+      "description": "Una libreria Angular per coordinare il blocco dell'interfaccia durante richieste HTTP concorrenti, basata su Signals, HttpContext e functional interceptors."
+    },
+    "viewProject": "Repository",
+    "liveDemo": "Demo live",
+    "documentation": "Documentazione"
+  },
+  "education": {
+    "label": "05 - Formazione",
+    "title": "Percorso di studi",
+    "items": {
+      "master": {
+        "title": "Master in AI Engineering",
+        "institution": "eCampus Digital School",
+        "period": "2025 - in corso"
+      },
+      "degree": {
+        "title": "Laurea Triennale in Ingegneria Informatica e dell'Automazione",
+        "institution": "Università telematica eCampus",
+        "period": "2022 - 2024"
+      },
+      "diploma": {
+        "title": "Diploma di Perito Informatico",
+        "institution": "IISS Rinaldo D'Aquino, Montella",
+        "period": "2014 - 2019"
+      }
+    }
+  },
+  "contact": {
+    "label": "06 - Contatti",
+    "title": "Parliamo del tuo prossimo progetto",
+    "description": "Sono disponibile per collaborazioni come consulente frontend, sviluppatore Angular o per ruoli di team leadership."
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "built": "Costruito con Angular & Tailwind CSS",
+    "sourceCode": "Codice sorgente",
+    "linkedin": "LinkedIn"
+  }
+}
