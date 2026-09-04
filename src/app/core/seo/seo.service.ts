@@ -9,7 +9,7 @@ interface SeoContent {
   locale: string;
 }
 
-const BASE_URL = 'https://jerryfalimanana.dev/';
+const BASE_URL = 'https://jerryfalimanana.github.io/';
 
 const CONTENT: Record<SupportedLanguage, SeoContent> = {
   fr: {

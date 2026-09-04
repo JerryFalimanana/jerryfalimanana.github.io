@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jerryfalimanana.dev/sitemap.xml
+Sitemap: https://jerryfalimanana.github.io/sitemap.xml

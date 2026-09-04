@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Une seule publication à la fois ; on annule les builds obsolètes.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Le CLI Angular 22 exige Node >= 22.22.3 ; la 24 est la version LTS
+          # sur laquelle le projet est validé.
+          node-version: '24'
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      # `ng build` prérend la route unique : la sortie browser/ est un site
+      # statique complet, le bundle server/ n'est pas publié.
+      - run: npm run build
+
+      # GitHub Pages sert 404.html pour toute URL inconnue. En y plaçant la
+      # même page, un lien profond retombe sur l'application au lieu d'une
+      # page d'erreur GitHub.
+      - name: Fallback SPA
+        run: cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/portfolio/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
