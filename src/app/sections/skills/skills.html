@@ -1,6 +1,6 @@
 <section
   id="skills"
-  class="relative border-t border-white/[0.06] bg-ink-900/50 py-24 sm:py-32"
+  class="relative border-t border-line-subtle bg-ink-900/50 py-24 sm:py-32"
 >
   <div
     class="pointer-events-none absolute left-1/3 bottom-10 h-72 w-72 rounded-full bg-brand-600/10 blur-[130px]"
@@ -21,32 +21,32 @@
         <div
           class="card group flex flex-col justify-between"
           [class.card-highlight]="
-            group.key === 'skills.groups.frontend' ||
-            group.key === 'skills.groups.ai'
+            group.key === 'skills.groups.backend' ||
+            group.key === 'skills.groups.frontend'
           "
         >
           <div>
             <div
-              class="flex items-center justify-between gap-2 border-b border-white/[0.06] pb-4 mb-4"
+              class="flex items-center justify-between gap-2 border-b border-line-subtle pb-4 mb-4"
             >
-              <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                @if (group.key === 'skills.groups.frontend') {
+              <h3 class="text-lg font-bold text-content-primary flex items-center gap-2">
+                @if (group.key === 'skills.groups.backend') {
                   <span class="h-2 w-2 rounded-full bg-brand-400"></span>
-                } @else if (group.key === 'skills.groups.ai') {
+                } @else if (group.key === 'skills.groups.frontend') {
                   <span class="h-2 w-2 rounded-full bg-accent-400"></span>
                 } @else {
-                  <span class="h-2 w-2 rounded-full bg-slate-500"></span>
+                  <span class="h-2 w-2 rounded-full bg-content-disabled"></span>
                 }
                 {{ group.key + '.title' | transloco }}
               </h3>
               @if (
-                group.key === 'skills.groups.frontend' ||
-                group.key === 'skills.groups.ai'
+                group.key === 'skills.groups.backend' ||
+                group.key === 'skills.groups.frontend'
               ) {
                 <span
                   class="font-mono text-[10px] uppercase tracking-wider text-accent-400 font-semibold px-2 py-0.5 rounded-full bg-accent-500/10 border border-accent-500/20"
                 >
-                  Core
+                  {{ 'skills.core' | transloco }}
                 </span>
               }
             </div>
@@ -54,11 +54,14 @@
               @for (item of group.items; track item) {
                 <span
                   [class]="
+                    (group.key === 'skills.groups.backend' &&
+                      (item === 'php' ||
+                        item === 'symfony' ||
+                        item === 'apiPlatform')) ||
                     (group.key === 'skills.groups.frontend' &&
-                      (item === 'angular' ||
-                        item === 'signals' ||
-                        item === 'typescript')) ||
-                    group.key === 'skills.groups.ai'
+                      (item === 'react' ||
+                        item === 'angular' ||
+                        item === 'typescript'))
                       ? 'chip-accent'
                       : 'chip'
                   "

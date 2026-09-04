@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LanguageService } from '../../core/i18n/language.service';
+import { ThemeService } from '../../core/theme/theme.service';
 
 interface NavLink {
   key: string;
@@ -15,6 +16,7 @@ interface NavLink {
 export class NavbarComponent {
   readonly isOpen = signal(false);
   readonly languageService = inject(LanguageService);
+  readonly themeService = inject(ThemeService);
   readonly links: NavLink[] = [
     { key: 'nav.about', href: '#about' },
     { key: 'nav.skills', href: '#skills' },
@@ -32,5 +34,8 @@ export class NavbarComponent {
   }
   toggleLanguage(): void {
     this.languageService.toggle();
+  }
+  toggleTheme(): void {
+    this.themeService.toggle();
   }
 }

@@ -1,0 +1,201 @@
+{
+  "profile": {
+    "title": "Développeur Fullstack PHP/Symfony - React & Angular",
+    "subtitle": "6+ ans d’expérience · Antananarivo, Madagascar",
+    "location": "Antananarivo, Madagascar"
+  },
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expériences",
+    "projects": "Projets",
+    "education": "Formations",
+    "contact": "Contact",
+    "contactMe": "Me contacter",
+    "skipToContent": "Aller au contenu principal",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "mainNav": "Navigation principale",
+    "backToTop": "Jerry Falimanana - Retour en haut de page"
+  },
+  "theme": {
+    "toDark": "Passer en thème sombre",
+    "toLight": "Passer en thème clair"
+  },
+  "hero": {
+    "availability": "Disponible pour de nouvelles collaborations",
+    "greeting": "Bonjour, je suis",
+    "description": "Je conçois et développe des applications web métier de bout en bout, avec PHP/Symfony côté serveur et React.js ou Angular côté client, en appliquant TDD, SOLID et la POO.",
+    "experienceCta": "Voir mon parcours",
+    "scroll": "Défiler",
+    "scrollAria": "Aller à la section À propos"
+  },
+  "about": {
+    "label": "01 - À propos",
+    "title": "Profil professionnel",
+    "years": "Années d’expérience",
+    "projects": "Entreprises / projets clés",
+    "technologies": "Technologies maîtrisées",
+    "profile": {
+      "summary": "Développeur fullstack depuis 2020, spécialisé en PHP/Symfony côté serveur et React.js / Angular côté client. J’interviens sur l’ensemble du cycle projet : définition des besoins, conception de base de données, développement et mise en production, en méthode Agile/Scrum. J’ai travaillé sur des plateformes métier telles que SCOPLAN, qui facilite la gestion, le suivi et la communication entre la société réalisatrice d’un projet de construction et son client, ainsi que sur une marketplace e-commerce et des applications immobilières. Je code en respectant les normes TDD, SOLID et POO, avec Docker et Git au quotidien."
+    },
+    "linkedinLabel": "Profil LinkedIn",
+    "linkedinAria": "Profil LinkedIn de Jerry Falimanana (ouvre dans un nouvel onglet)"
+  },
+  "skills": {
+    "label": "02 - Compétences",
+    "title": "Stack technique",
+    "groups": {
+      "backend": {
+        "title": "Backend",
+        "items": {
+          "php": "PHP",
+          "symfony": "Symfony 3/4/5/6/7",
+          "apiPlatform": "API Platform",
+          "twig": "Twig",
+          "sylius": "Sylius",
+          "rest": "API REST"
+        }
+      },
+      "frontend": {
+        "title": "Frontend",
+        "items": {
+          "javascript": "JavaScript",
+          "typescript": "TypeScript",
+          "react": "React.js",
+          "angular": "Angular",
+          "jquery": "jQuery",
+          "html": "HTML5",
+          "css": "CSS3",
+          "tailwind": "Tailwind CSS"
+        }
+      },
+      "database": {
+        "title": "Bases de données & modélisation",
+        "items": {
+          "mysql": "MySQL",
+          "mariadb": "MariaDB",
+          "sql": "SQL",
+          "merise": "MERISE",
+          "uml": "UML",
+          "modeling": "Conception de base de données"
+        }
+      },
+      "tooling": {
+        "title": "Outils & environnement",
+        "items": {
+          "docker": "Docker",
+          "git": "Git",
+          "gitlab": "GitLab",
+          "phpstorm": "PHPStorm",
+          "vscode": "Visual Studio Code",
+          "linux": "Linux",
+          "trello": "Trello"
+        }
+      },
+      "methods": {
+        "title": "Méthodes & normes",
+        "items": {
+          "agile": "Agile / Scrum",
+          "tdd": "TDD",
+          "solid": "SOLID",
+          "oop": "POO",
+          "requirements": "Définition des besoins"
+        }
+      }
+    },
+    "core": "Clé"
+  },
+  "experience": {
+    "label": "03 - Expériences",
+    "title": "Parcours professionnel",
+    "items": {
+      "scoplanV2": {
+        "role": "Développeur Fullstack PHP/Symfony - Angular",
+        "company": "Adrware Consulting - Antananarivo, Madagascar",
+        "period": "02/2025 - en cours",
+        "description": "Migration de SCOPLAN vers la version 2, une plateforme qui facilite la gestion, le suivi et la communication entre la société réalisatrice d’un projet de construction et son client. Développement fullstack sous Symfony 7 et Angular 19 avec Tailwind, dans un environnement Docker sous Linux, en respectant les normes TDD, SOLID et POO."
+      },
+      "scoplan": {
+        "role": "Développeur Fullstack PHP/Symfony - React.js",
+        "company": "Adrware Consulting - Antananarivo, Madagascar",
+        "period": "09/2022 - en cours",
+        "description": "Développement de SCOPLAN (www.scoplan.com), plateforme de gestion et de suivi de projets de construction. Travail fullstack sur Symfony 3/4 et React.js, avec Twig, jQuery, MySQL et des API REST, dans un environnement Docker sous Linux."
+      },
+      "myagency": {
+        "role": "Développeur PHP/Symfony",
+        "company": "MyAgency - Antananarivo, Madagascar",
+        "period": "03/2022 - 09/2022",
+        "description": "Développement du projet IMMO sous Symfony 4 et API Platform. Conception et exposition d’API REST, persistance MySQL et environnement Docker, en appliquant TDD, SOLID et la POO."
+      },
+      "esokia": {
+        "role": "Développeur web",
+        "company": "Esokia - Antananarivo, Madagascar",
+        "period": "02/2021 - 05/2021",
+        "description": "Développement de la marketplace ABANA (abana.mu) sous Symfony 4, API Platform et React.js. Intégration front en HTML5/CSS3, API REST et base MySQL dans un environnement conteneurisé."
+      },
+      "freelance": {
+        "role": "Développeur web - Freelance",
+        "company": "Indépendant - Antananarivo, Madagascar",
+        "period": "02/2020 - 07/2022",
+        "description": "Conception et développement des projets Trading, Teambuilding et S-Manager pour des clients directs. Stack Symfony 4/5 avec API Platform et React.js, base MySQL, Docker et API REST, du recueil des besoins jusqu’à la livraison."
+      }
+    }
+  },
+  "projects": {
+    "label": "04 - Projets",
+    "title": "Projets personnels",
+    "crm": {
+      "description": "Application de gestion de la relation client développée en Symfony avec API Platform : suivi des contacts, des opportunités et des relances, sur une base MySQL et une API REST."
+    },
+    "travel": {
+      "description": "Plateforme de voyage construite avec Symfony et React.js : catalogue de destinations, réservation et gestion des contenus, adossée à API Platform et MySQL."
+    },
+    "viewProject": "Voir le projet",
+    "liveDemo": "Démo en ligne",
+    "documentation": "Documentation"
+  },
+  "education": {
+    "label": "05 - Formations",
+    "title": "Parcours académique",
+    "items": {
+      "ispm": {
+        "title": "Électronique, Systèmes Informatiques et Intelligence Artificielle - Bac +3",
+        "institution": "Institut Supérieur Polytechnique de Madagascar (ISPM)",
+        "period": "2017 - 2020"
+      },
+      "chemistry": {
+        "title": "Fondamentaux en Chimie - Bac +3",
+        "institution": "Université d’Antananarivo, Madagascar",
+        "period": "2014 - 2017"
+      },
+      "baccalaureate": {
+        "title": "Baccalauréat Scientifique - Série C",
+        "institution": "Lycée Philibert Tsiranana, Mahajanga, Madagascar",
+        "period": "2012 - 2013"
+      }
+    }
+  },
+  "contact": {
+    "label": "06 - Contact",
+    "title": "Parlons de votre prochain projet",
+    "description": "Je suis disponible pour des missions de développement fullstack PHP/Symfony, React.js ou Angular, en freelance comme en équipe.",
+    "phone": "Téléphone",
+    "whatsapp": "WhatsApp",
+    "linkedinAria": "Contacter Jerry Falimanana sur LinkedIn (ouvre dans un nouvel onglet)"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "built": "Construit avec Angular & Tailwind CSS",
+    "sourceCode": "Code source",
+    "linkedin": "LinkedIn",
+    "githubAria": "Profil GitHub de Jerry Falimanana (ouvre dans un nouvel onglet)",
+    "linkedinAria": "Profil LinkedIn de Jerry Falimanana (ouvre dans un nouvel onglet)"
+  },
+  "languages": {
+    "label": "Langues",
+    "french": "Français - lu, écrit et parlé (95%)",
+    "english": "Anglais - lu (95%), écrit (70%), parlé (60%)",
+    "malagasy": "Malgache - langue maternelle"
+  }
+}

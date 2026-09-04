@@ -9,19 +9,21 @@ interface SeoContent {
   locale: string;
 }
 
-const BASE_URL = 'https://salvatoredigenua.it/';
+const BASE_URL = 'https://jerryfalimanana.dev/';
 
 const CONTENT: Record<SupportedLanguage, SeoContent> = {
-  it: {
-    title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
+  fr: {
+    title:
+      'Jerry Falimanana | Développeur Fullstack PHP/Symfony - React & Angular',
     description:
-      'Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular, TypeScript e AI-assisted development.',
-    locale: 'it_IT',
+      'Portfolio de Jerry Falimanana Ratsimbajaona, développeur fullstack PHP/Symfony, React.js et Angular basé à Antananarivo, Madagascar.',
+    locale: 'fr_FR',
   },
   en: {
-    title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
+    title:
+      'Jerry Falimanana | Fullstack Developer PHP/Symfony - React & Angular',
     description:
-      'Portfolio of Salvatore Di Genua, Senior Frontend Engineer specialized in Angular, TypeScript and AI-assisted development.',
+      'Portfolio of Jerry Falimanana Ratsimbajaona, fullstack developer specialized in PHP/Symfony, React.js and Angular, based in Antananarivo, Madagascar.',
     locale: 'en_US',
   },
 };
@@ -34,7 +36,7 @@ export class SeoService {
 
   update(language: SupportedLanguage): void {
     const content = CONTENT[language];
-    const alternateLocale = CONTENT[language === 'it' ? 'en' : 'it'].locale;
+    const alternateLocale = CONTENT[language === 'fr' ? 'en' : 'fr'].locale;
     const canonicalUrl = this.buildCanonicalUrl(language);
 
     this.document.documentElement.lang = language;

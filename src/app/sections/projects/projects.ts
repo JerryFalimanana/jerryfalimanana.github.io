@@ -8,7 +8,7 @@ import { PROJECTS } from '../../core/profile.data';
   template: `
     <section
       id="projects"
-      class="relative border-t border-white/[0.06] bg-ink-900/40 py-24 sm:py-32"
+      class="relative border-t border-line-subtle bg-ink-900/40 py-24 sm:py-32"
       aria-labelledby="projects-title"
     >
       <div
@@ -34,7 +34,7 @@ import { PROJECTS } from '../../core/profile.data';
             >
               <div>
                 <div
-                  class="mb-4 flex items-start justify-between gap-4 border-b border-white/[0.06] pb-4"
+                  class="mb-4 flex items-start justify-between gap-4 border-b border-line-subtle pb-4"
                 >
                   <div>
                     <span
@@ -46,19 +46,19 @@ import { PROJECTS } from '../../core/profile.data';
                       {{ project.category }}
                     </span>
                     <h3
-                      class="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl"
+                      class="mt-2 text-xl font-bold tracking-tight text-content-primary sm:text-2xl"
                     >
                       {{ project.name }}
                     </h3>
                   </div>
                 </div>
                 <p
-                  class="text-sm leading-relaxed text-slate-300/90 sm:text-base"
+                  class="text-sm leading-relaxed text-content-secondary/90 sm:text-base"
                 >
                   {{ project.key + '.description' | transloco }}
                 </p>
                 <div
-                  class="mt-6 flex flex-wrap gap-2 border-t border-white/[0.06] pt-4"
+                  class="mt-6 flex flex-wrap gap-2 border-t border-line-subtle pt-4"
                 >
                   @for (tag of project.tags; track tag; let tagIndex = $index) {
                     <span
@@ -70,7 +70,7 @@ import { PROJECTS } from '../../core/profile.data';
                 </div>
               </div>
               <div
-                class="mt-8 flex flex-wrap gap-3 border-t border-white/[0.06] pt-5"
+                class="mt-8 flex flex-wrap gap-3 border-t border-line-subtle pt-5"
               >
                 <a
                   class="inline-flex min-h-11 items-center justify-center rounded-lg border border-accent-500/30 bg-accent-500/10 px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-accent-300 transition-all hover:border-accent-400/50 hover:bg-accent-500/15 hover:text-accent-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 focus-visible:outline-offset-2"
@@ -80,14 +80,16 @@ import { PROJECTS } from '../../core/profile.data';
                   [attr.aria-label]="'projects.viewProject' | transloco"
                   >{{ 'projects.viewProject' | transloco }}</a
                 >
-                <a
-                  class="inline-flex min-h-11 items-center justify-center rounded-lg border border-brand-500/30 bg-brand-500/10 px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-brand-300 transition-all hover:border-brand-400/50 hover:bg-brand-500/15 hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-300 focus-visible:outline-offset-2"
-                  [href]="project.liveUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  [attr.aria-label]="project.liveLabel | transloco"
-                  >{{ project.liveLabel | transloco }}</a
-                >
+                @if (project.liveUrl && project.liveLabel) {
+                  <a
+                    class="inline-flex min-h-11 items-center justify-center rounded-lg border border-brand-500/30 bg-brand-500/10 px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-brand-300 transition-all hover:border-brand-400/50 hover:bg-brand-500/15 hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-300 focus-visible:outline-offset-2"
+                    [href]="project.liveUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    [attr.aria-label]="project.liveLabel | transloco"
+                    >{{ project.liveLabel | transloco }}</a
+                  >
+                }
               </div>
             </article>
           }

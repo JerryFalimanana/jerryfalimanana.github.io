@@ -1,14 +1,14 @@
 <header
-  class="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-ink-950/80 backdrop-blur-xl transition-all"
+  class="fixed inset-x-0 top-0 z-50 border-b border-line bg-ink-950/80 backdrop-blur-xl transition-all"
 >
   <nav
     class="section-container flex h-16 items-center justify-between"
-    aria-label="Navigazione principale"
+    [attr.aria-label]="'nav.mainNav' | transloco"
   >
     <a
       href="#top"
-      class="group inline-flex items-center gap-2 font-mono text-base font-bold text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-lg px-1.5 py-1"
-      aria-label="Salvatore Di Genua - Torna all'inizio"
+      class="group inline-flex items-center gap-2 font-mono text-base font-bold text-content-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-lg px-1.5 py-1"
+      [attr.aria-label]="'nav.backToTop' | transloco"
     >
       <span
         class="text-brand-300 transition-transform group-hover:-translate-x-0.5"
@@ -16,16 +16,16 @@
         &lt;
       </span>
       <span
-        class="tracking-wider bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent"
+        class="tracking-wider bg-gradient-to-r from-content-primary via-content-secondary to-content-muted bg-clip-text text-transparent"
       >
-        SDG
+        JF
       </span>
       <span
         class="text-accent-300 transition-transform group-hover:translate-x-0.5"
       >
         /&gt;
       </span>
-      <span class="relative flex h-2 w-2 ml-1" title="Available for work">
+      <span class="relative flex h-2 w-2 ml-1" [title]="'hero.availability' | transloco">
         <span
           class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-75"
         ></span>
@@ -39,7 +39,7 @@
         <li>
           <a
             [href]="link.href"
-            class="relative text-sm font-medium text-slate-300 transition-all duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1"
+            class="relative text-sm font-medium text-content-secondary transition-all duration-200 hover:text-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1"
           >
             {{ link.key | transloco }}
           </a>
@@ -49,18 +49,61 @@
     <div class="flex items-center gap-3">
       <button
         type="button"
-        class="inline-flex min-h-[38px] items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-slate-300 backdrop-blur-md transition-all hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
-        (click)="toggleLanguage()"
+        class="inline-flex min-h-[38px] min-w-[38px] items-center justify-center rounded-xl border border-line bg-veil p-2 text-content-secondary backdrop-blur-md transition-all hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
+        (click)="toggleTheme()"
         [attr.aria-label]="
-          languageService.language() === 'it'
-            ? 'Passa alla lingua inglese (EN)'
-            : 'Switch to Italian language (IT)'
+          (themeService.theme() === 'dark' ? 'theme.toLight' : 'theme.toDark')
+            | transloco
         "
       >
-        <span [class.text-accent-300]="languageService.language() === 'it'">
-          IT
+        @if (themeService.theme() === 'dark') {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+            />
+          </svg>
+        } @else {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+            />
+          </svg>
+        }
+      </button>
+      <button
+        type="button"
+        class="inline-flex min-h-[38px] items-center gap-1.5 rounded-xl border border-line bg-veil px-3 py-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-content-secondary backdrop-blur-md transition-all hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
+        (click)="toggleLanguage()"
+        [attr.aria-label]="
+          languageService.language() === 'fr'
+            ? 'Switch to English (EN)'
+            : 'Passer en français (FR)'
+        "
+      >
+        <span [class.text-accent-300]="languageService.language() === 'fr'">
+          FR
         </span>
-        <span class="text-white/20">|</span>
+        <span class="text-content-disabled/50">|</span>
         <span [class.text-accent-300]="languageService.language() === 'en'">
           EN
         </span>
@@ -73,11 +116,13 @@
       </a>
       <button
         type="button"
-        class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] p-2.5 text-slate-200 backdrop-blur-md transition-colors hover:bg-white/[0.08] hover:text-white md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
+        class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-line bg-veil p-2.5 text-content-primary backdrop-blur-md transition-colors hover:bg-veil-strong hover:text-content-primary md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
         (click)="toggleMenu()"
         [attr.aria-expanded]="isOpen()"
         [attr.aria-label]="
-          isOpen() ? 'Chiudi menu di navigazione' : 'Apri menu di navigazione'
+          isOpen()
+            ? ('nav.closeMenu' | transloco)
+            : ('nav.openMenu' | transloco)
         "
       >
         @if (!isOpen()) {
@@ -118,14 +163,14 @@
   </nav>
   @if (isOpen()) {
     <div
-      class="border-t border-white/[0.08] bg-ink-950/95 px-6 py-6 shadow-2xl backdrop-blur-2xl md:hidden animate-in fade-in slide-in-from-top-2"
+      class="border-t border-line bg-ink-950/95 px-6 py-6 shadow-2xl backdrop-blur-2xl md:hidden animate-in fade-in slide-in-from-top-2"
     >
       <ul class="flex flex-col gap-4">
         @for (link of links; track link.href) {
           <li>
             <a
               [href]="link.href"
-              class="flex items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+              class="flex items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-content-secondary transition-colors hover:bg-veil hover:text-content-primary"
               (click)="closeMenu()"
             >
               <span>{{ link.key | transloco }}</span>

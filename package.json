@@ -1,10 +1,10 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "author": "Salvatore Di Genua",
+  "author": "Jerry Falimanana Ratsimbajaona",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SalvatoreDiGenua/portfolio.git"
+    "url": "git+https://github.com/JerryFalimanana/portfolio.git"
   },
   "scripts": {
     "ng": "ng",

@@ -38,16 +38,16 @@
         {{ profile.name }}
       </span>
     </h1>
-    <p class="mt-5 max-w-2xl text-xl font-semibold text-slate-200 sm:text-2xl">
-      {{ profile.title }}
+    <p class="mt-5 max-w-2xl text-xl font-semibold text-content-primary sm:text-2xl">
+      {{ profile.title | transloco }}
     </p>
     <p
       class="mt-2 font-mono text-sm uppercase tracking-widest text-accent-300 font-medium"
     >
-      {{ profile.subtitle }}
+      {{ profile.subtitle | transloco }}
     </p>
     <p
-      class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300/90 sm:text-lg"
+      class="mt-6 max-w-2xl text-base leading-relaxed text-content-secondary/90 sm:text-lg"
     >
       {{ 'hero.description' | transloco }}
     </p>
@@ -79,8 +79,8 @@
     </div>
     <a
       href="#about"
-      class="mt-14 inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1"
-      aria-label="Scorri alla sezione Chi sono"
+      class="mt-14 inline-flex items-center gap-2 text-content-muted transition-colors hover:text-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1"
+      [attr.aria-label]="'hero.scrollAria' | transloco"
     >
       <span class="text-xs font-mono uppercase tracking-widest">
         {{ 'hero.scroll' | transloco }}

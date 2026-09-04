@@ -20,7 +20,9 @@
       >
         {{ 'contact.title' | transloco }}
       </h2>
-      <p class="mx-auto mt-4 max-w-xl text-base sm:text-lg text-slate-300">
+      <p
+        class="mx-auto mt-4 max-w-xl text-base sm:text-lg text-content-secondary"
+      >
         {{ 'contact.description' | transloco }}
       </p>
       <div
@@ -30,12 +32,21 @@
           [href]="'mailto:' + profile.email"
           class="btn-primary min-h-[48px] !px-8 text-base shadow-glow-brand"
         >
-          <img
-            src="https://s.magecdn.com/social/mw-mail.svg"
-            alt=""
-            aria-hidden="true"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
             class="h-4 w-4"
-          />
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+            />
+          </svg>
           <span>{{ 'nav.contactMe' | transloco }}</span>
         </a>
         <a
@@ -43,30 +54,42 @@
           target="_blank"
           rel="noopener noreferrer"
           class="btn-secondary min-h-[48px] !px-6 text-sm"
-          aria-label="Connettiti con Salvatore Di Genua su LinkedIn (apre in una nuova scheda)"
+          [attr.aria-label]="'contact.linkedinAria' | transloco"
         >
-          <img
-            src="https://s.magecdn.com/social/mw-linkedin.svg"
-            alt=""
-            aria-hidden="true"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
             class="h-4 w-4"
-          />
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"
+            />
+          </svg>
           <span>LinkedIn</span>
         </a>
       </div>
       <div
-        class="mt-10 flex flex-col items-center justify-center gap-2 text-xs font-mono text-slate-400 sm:flex-row"
+        class="mt-10 flex flex-col items-center justify-center gap-2 text-xs font-mono text-content-muted sm:flex-row"
       >
         <div class="flex items-center gap-2">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
-          <span>{{ profile.location }}</span>
+          <span>{{ profile.location | transloco }}</span>
         </div>
-        <span class="hidden text-white/20 sm:block">•</span>
+        <span class="hidden text-content-disabled/50 sm:block">•</span>
         <a
           [href]="'mailto:' + profile.email"
-          class="hover:text-white transition-colors underline underline-offset-4 decoration-brand-400/40"
+          class="hover:text-content-primary transition-colors underline underline-offset-4 decoration-brand-400/40"
         >
           {{ profile.email }}
+        </a>
+        <span class="hidden text-content-disabled/50 sm:block">•</span>
+        <a
+          [href]="'tel:' + profile.whatsapp"
+          class="hover:text-content-primary transition-colors underline underline-offset-4 decoration-brand-400/40"
+        >
+          {{ profile.phone }}
         </a>
       </div>
     </div>

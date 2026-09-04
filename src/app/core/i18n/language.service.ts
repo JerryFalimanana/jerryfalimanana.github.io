@@ -2,14 +2,14 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Service, inject, signal } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 
-export type SupportedLanguage = 'it' | 'en';
+export type SupportedLanguage = 'fr' | 'en';
 
 @Service()
 export class LanguageService {
   private readonly transloco = inject(TranslocoService);
   private readonly document = inject(DOCUMENT);
   private readonly platformId = inject(PLATFORM_ID);
-  public static readonly storageKey = 'sdg-portfolio.language';
+  public static readonly storageKey = 'jf-portfolio.language';
   public static readonly langQueryParam = 'lang';
 
   readonly language = signal<SupportedLanguage>(this.getInitialLanguage());
@@ -29,7 +29,7 @@ export class LanguageService {
   }
 
   toggle(): void {
-    this.setLanguage(this.language() === 'it' ? 'en' : 'it');
+    this.setLanguage(this.language() === 'fr' ? 'en' : 'fr');
   }
 
   private applyLanguage(language: SupportedLanguage): void {
@@ -48,17 +48,17 @@ export class LanguageService {
     }
 
     const storedLanguage = localStorage.getItem(LanguageService.storageKey);
-    if (storedLanguage === 'it' || storedLanguage === 'en') {
+    if (storedLanguage === 'fr' || storedLanguage === 'en') {
       return storedLanguage;
     }
 
-    return navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
+    return navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en';
   }
 
   private getLanguageFromUrl(): SupportedLanguage | null {
     const params = new URLSearchParams(this.document.location.search);
     const value = params.get(LanguageService.langQueryParam);
-    return value === 'it' || value === 'en' ? value : null;
+    return value === 'fr' || value === 'en' ? value : null;
   }
 
   private syncUrl(language: SupportedLanguage): void {

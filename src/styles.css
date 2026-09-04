@@ -2,16 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------------------------------------------------------------------------
+   Thèmes. Le sombre est la référence : ses valeurs sont celles d'origine.
+   Le clair rejoue les mêmes rôles avec une base verte très désaturée, pour
+   que l'identité émeraude / lime reste cohérente d'un thème à l'autre.
+
+   Les slots 300 et 400 portent le texte coloré : ils s'assombrissent en
+   thème clair pour rester lisibles. Les slots 500 à 700 servent aux fonds
+   et bordures teintés et ne bougent pas d'un thème à l'autre. Le slot 900
+   sert aux lavis de dégradé : il s'éclaircit en thème clair.
+--------------------------------------------------------------------------- */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --brand-300: 110 231 183;
+  --brand-400: 52 211 153;
+  --brand-500: 16 185 129;
+  --brand-600: 5 150 105;
+  --brand-700: 4 120 87;
+  --brand-800: 6 95 70;
+  --brand-900: 6 78 59;
+
+  --accent-300: 217 249 157;
+  --accent-400: 190 242 100;
+  --accent-500: 163 230 53;
+  --accent-600: 132 204 22;
+
+  --ink-950: 7 10 8;
+  --ink-900: 10 15 12;
+  --ink-850: 16 23 19;
+  --ink-800: 21 29 24;
+  --ink-700: 29 42 34;
+
+  --content-primary: 248 250 252;
+  --content-secondary: 203 213 225;
+  --content-muted: 148 163 184;
+  --content-disabled: 100 116 139;
+
+  --line-subtle: rgb(255 255 255 / 0.06);
+  --line: rgb(255 255 255 / 0.1);
+  --line-strong: rgb(255 255 255 / 0.15);
+  --veil: rgb(255 255 255 / 0.04);
+  --veil-strong: rgb(255 255 255 / 0.08);
+
+  --grid-line: rgb(255 255 255 / 0.03);
+  --dot-line: rgb(255 255 255 / 0.08);
+
+  --selection-fg: #ffffff;
+  --scrollbar-track: #070a08;
+  --scrollbar-thumb: #1d2a22;
+  --scrollbar-thumb-hover: #059669;
+
+  --shadow-glow-brand: 0 0 40px -10px rgb(16 185 129 / 0.42);
+  --shadow-glow-accent: 0 0 40px -10px rgb(190 242 100 / 0.3);
+  --shadow-glow-subtle:
+    0 4px 20px -2px rgb(0 0 0 / 0.5), 0 0 15px -2px rgb(16 185 129 / 0.12);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --brand-300: 4 120 87;
+  --brand-400: 5 150 105;
+  --brand-500: 16 185 129;
+  --brand-600: 5 150 105;
+  --brand-700: 4 120 87;
+  --brand-800: 6 95 70;
+  --brand-900: 167 243 208;
+
+  --accent-300: 77 124 15;
+  --accent-400: 101 163 13;
+  --accent-500: 163 230 53;
+  --accent-600: 132 204 22;
+
+  --ink-950: 244 247 245;
+  --ink-900: 255 255 255;
+  --ink-850: 238 243 240;
+  --ink-800: 228 235 231;
+  --ink-700: 211 221 215;
+
+  --content-primary: 11 26 20;
+  --content-secondary: 51 70 61;
+  --content-muted: 92 111 102;
+  --content-disabled: 100 117 108;
+
+  --line-subtle: rgb(15 42 31 / 0.09);
+  --line: rgb(15 42 31 / 0.14);
+  --line-strong: rgb(15 42 31 / 0.2);
+  --veil: rgb(15 42 31 / 0.04);
+  --veil-strong: rgb(15 42 31 / 0.08);
+
+  --grid-line: rgb(15 42 31 / 0.05);
+  --dot-line: rgb(15 42 31 / 0.09);
+
+  --selection-fg: #0b1a14;
+  --scrollbar-track: #eef3f0;
+  --scrollbar-thumb: #c3d1ca;
+  --scrollbar-thumb-hover: #059669;
+
+  --shadow-glow-brand: 0 0 40px -12px rgb(16 185 129 / 0.4);
+  --shadow-glow-accent: 0 0 40px -12px rgb(132 204 22 / 0.3);
+  --shadow-glow-subtle:
+    0 4px 20px -4px rgb(15 42 31 / 0.1), 0 0 15px -2px rgb(16 185 129 / 0.12);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
   }
   body {
     @apply bg-ink-950 text-content-secondary font-sans antialiased overflow-x-hidden;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
   ::selection {
-    @apply bg-brand-500/40 text-white;
+    background-color: rgb(var(--brand-500) / 0.4);
+    color: var(--selection-fg);
   }
   h1,
   h2,
@@ -25,14 +133,14 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #070a08;
+    background: var(--scrollbar-track);
   }
   ::-webkit-scrollbar-thumb {
-    background: #1d2a22;
+    background: var(--scrollbar-thumb);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #059669;
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
@@ -47,16 +155,16 @@
     @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-900/50 transition-all duration-300 hover:bg-brand-600 hover:shadow-glow-brand hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-content-primary backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-white hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-line-strong bg-veil px-6 py-3 text-sm font-semibold text-content-primary backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-content-primary hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
   }
   .card {
-    @apply relative rounded-2xl border border-white/[0.08] bg-ink-900/70 p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-500/30 hover:bg-ink-850/80 hover:shadow-glow-subtle hover:-translate-y-1;
+    @apply relative rounded-2xl border border-line bg-ink-900/70 p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-500/30 hover:bg-ink-850/80 hover:shadow-glow-subtle hover:-translate-y-1;
   }
   .card-highlight {
     @apply relative overflow-hidden rounded-2xl border border-brand-500/20 bg-gradient-to-b from-brand-900/40 via-ink-900/80 to-ink-950 p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-400/40 hover:shadow-glow-brand hover:-translate-y-1;
   }
   .chip {
-    @apply inline-flex items-center rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-mono font-medium text-content-secondary transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300;
+    @apply inline-flex items-center rounded-lg border border-line bg-veil px-3 py-1 text-xs font-mono font-medium text-content-secondary transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300;
   }
   .chip-accent {
     @apply inline-flex items-center rounded-lg border border-accent-500/30 bg-accent-500/10 px-3 py-1 text-xs font-mono font-medium text-accent-300 transition-colors hover:border-accent-300 hover:bg-accent-500/20 hover:text-accent-300;
@@ -67,7 +175,7 @@
 }
 
 :focus-visible {
-  outline: 2px solid #bef264;
+  outline: 2px solid rgb(var(--accent-400));
   outline-offset: 2px;
 }
 

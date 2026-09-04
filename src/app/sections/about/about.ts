@@ -10,8 +10,8 @@ import { PROFILE } from '../../core/profile.data';
 export class AboutComponent {
   readonly profile = PROFILE;
   readonly stats = [
-    { value: '5+', key: 'about.years' },
-    { value: '3', key: 'about.projects' },
-    { value: '10+', key: 'about.technologies' },
+    { value: '6+', key: 'about.years' },
+    { value: '5', key: 'about.projects' },
+    { value: '20+', key: 'about.technologies' },
   ];
 }

@@ -2,6 +2,7 @@ import { Component, effect, inject } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LanguageService } from './core/i18n/language.service';
 import { SeoService } from './core/seo/seo.service';
+import { ThemeService } from './core/theme/theme.service';
 import { NavbarComponent } from './layout/navbar/navbar';
 import { FooterComponent } from './layout/footer/footer';
 import { HeroComponent } from './sections/hero/hero';
@@ -31,6 +32,9 @@ import { Projects } from './sections/projects/projects';
 export class App {
   private readonly languageService = inject(LanguageService);
   private readonly seo = inject(SeoService);
+  // Instancié à la racine pour que le thème s'applique même si la
+  // navbar n'est pas rendue.
+  private readonly theme = inject(ThemeService);
 
   constructor() {
     effect(() => this.seo.update(this.languageService.language()));

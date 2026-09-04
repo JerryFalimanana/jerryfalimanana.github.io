@@ -1,4 +1,9 @@
 {
+  "profile": {
+    "title": "Fullstack Developer PHP/Symfony - React & Angular",
+    "subtitle": "6+ years of experience · Antananarivo, Madagascar",
+    "location": "Antananarivo, Madagascar"
+  },
   "nav": {
     "about": "About me",
     "skills": "Skills",
@@ -7,14 +12,23 @@
     "education": "Education",
     "contact": "Contact",
     "contactMe": "Contact me",
-    "skipToContent": "Skip to main content"
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "mainNav": "Main navigation",
+    "backToTop": "Jerry Falimanana - Back to top"
+  },
+  "theme": {
+    "toDark": "Switch to dark theme",
+    "toLight": "Switch to light theme"
   },
   "hero": {
     "availability": "Available for new collaborations",
     "greeting": "Hi, I am",
-    "description": "I build modern and scalable interfaces with Angular and use AI-assisted development tools to improve delivery speed and code quality.",
+    "description": "I design and build business web applications end to end, with PHP/Symfony on the server and React.js or Angular on the client, applying TDD, SOLID and OOP.",
     "experienceCta": "View my experience",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "scrollAria": "Go to the About section"
   },
   "about": {
     "label": "01 - About me",
@@ -23,115 +37,119 @@
     "projects": "Companies / key projects",
     "technologies": "Core technologies",
     "profile": {
-      "summary": "I have been developing web applications since 2019, specializing in Angular and TypeScript, with a focus on Signals and Standalone Components. I have worked as a developer and team lead on fintech projects and cloud platforms, covering architecture, development, code quality, and collaboration with clients and stakeholders. I use Cursor, Antigravity, Copilot, Claude Code, and OpenCode in my daily workflow, along with custom skills and MCP servers for code generation, refactoring, and documentation that fit the project's architecture."
-    }
+      "summary": "Fullstack developer since 2020, specialized in PHP/Symfony on the server side and React.js / Angular on the client side. I work across the full project cycle: requirements definition, database design, development and release, in an Agile/Scrum environment. I have worked on business platforms such as SCOPLAN, which streamlines management, tracking and communication between a construction contractor and its client, as well as an e-commerce marketplace and real estate applications. I code to TDD, SOLID and OOP standards, with Docker and Git as part of my daily workflow."
+    },
+    "linkedinLabel": "LinkedIn Profile",
+    "linkedinAria": "Jerry Falimanana on LinkedIn (opens in a new tab)"
   },
   "skills": {
     "label": "02 - Skills",
     "title": "Technology stack",
     "groups": {
-      "frontend": {
-        "title": "Frontend & Framework",
-        "items": {
-          "angular": "Angular",
-          "typescript": "TypeScript",
-          "signals": "Signals",
-          "standalone": "Standalone Components",
-          "changeDetection": "Change Detection",
-          "rxjs": "RxJS",
-          "state": "NgRx / Redux",
-          "react": "React"
-        }
-      },
-      "ui": {
-        "title": "UI & Libraries",
-        "items": {
-          "html": "HTML5",
-          "css": "CSS3",
-          "scss": "SCSS",
-          "tailwind": "Tailwind CSS",
-          "material": "Angular Material",
-          "primeng": "PrimeNG",
-          "bootstrap": "Bootstrap",
-          "mui": "MUI",
-          "devexpress": "DevExpress"
-        }
-      },
-      "testing": {
-        "title": "Testing & Quality",
-        "items": {
-          "cypress": "Cypress E2E",
-          "karma": "Karma / Jasmine",
-          "review": "Code Review",
-          "refactoring": "Refactoring"
-        }
-      },
       "backend": {
         "title": "Backend",
         "items": {
-          "rest": "REST API",
-          "node": "Node.js",
-          "express": "Express.js",
-          "socket": "Socket.IO",
-          "mysql": "MySQL"
+          "php": "PHP",
+          "symfony": "Symfony 3/4/5/6/7",
+          "apiPlatform": "API Platform",
+          "twig": "Twig",
+          "sylius": "Sylius",
+          "rest": "REST API"
         }
       },
-      "ai": {
-        "title": "AI-Assisted Development",
+      "frontend": {
+        "title": "Frontend",
         "items": {
-          "cursor": "Cursor",
-          "antigravity": "Antigravity",
-          "copilot": "Copilot",
-          "claude": "Claude Code",
-          "opencode": "OpenCode",
-          "skills": "Custom Skills",
-          "mcp": "MCP Servers"
+          "javascript": "JavaScript",
+          "typescript": "TypeScript",
+          "react": "React.js",
+          "angular": "Angular",
+          "jquery": "jQuery",
+          "html": "HTML5",
+          "css": "CSS3",
+          "tailwind": "Tailwind CSS"
+        }
+      },
+      "database": {
+        "title": "Databases & modelling",
+        "items": {
+          "mysql": "MySQL",
+          "mariadb": "MariaDB",
+          "sql": "SQL",
+          "merise": "MERISE",
+          "uml": "UML",
+          "modeling": "Database design"
+        }
+      },
+      "tooling": {
+        "title": "Tooling & environment",
+        "items": {
+          "docker": "Docker",
+          "git": "Git",
+          "gitlab": "GitLab",
+          "phpstorm": "PHPStorm",
+          "vscode": "Visual Studio Code",
+          "linux": "Linux",
+          "trello": "Trello"
         }
       },
       "methods": {
-        "title": "Methodologies",
+        "title": "Methods & standards",
         "items": {
-          "scrum": "Scrum / Agile",
-          "cicd": "CI/CD",
-          "microfrontend": "Micro-Frontend",
-          "leadership": "Team Leadership",
-          "mentoring": "Technical Mentoring"
+          "agile": "Agile / Scrum",
+          "tdd": "TDD",
+          "solid": "SOLID",
+          "oop": "OOP",
+          "requirements": "Requirements definition"
         }
       }
-    }
+    },
+    "core": "Core"
   },
   "experience": {
     "label": "03 - Experience",
     "title": "Professional journey",
     "items": {
-      "orbyta": {
-        "role": "Senior IT Consultant - Frontend & Application Architecture",
-        "company": "Orbyta Tech",
-        "period": "2025 - Present",
-        "description": "Frontend consulting for modern web applications. I work with Angular, Signals, RxJS, NgRx, PrimeNG, Tailwind and Bootstrap, define architecture with the client, and manage priorities and delivery. I integrate Java backends and real-time features through STOMP. I also use Cursor, OpenCode, MCP servers and custom skills for code writing, review and refactoring."
+      "scoplanV2": {
+        "role": "Fullstack Developer PHP/Symfony - Angular",
+        "company": "Adrware Consulting - Antananarivo, Madagascar",
+        "period": "02/2025 - Present",
+        "description": "Migration of SCOPLAN to version 2, a platform that streamlines management, tracking and communication between a construction contractor and its client. Fullstack development with Symfony 7 and Angular 19 with Tailwind, in a Docker environment on Linux, following TDD, SOLID and OOP standards."
       },
-      "scai": {
-        "role": "Senior Frontend Developer & Team Lead",
-        "company": "SCAI Tecno",
-        "period": "2023 - 2025",
-        "description": "Led the frontend team developing a debt recovery management application with a Micro-Frontend architecture. I worked with Angular, RxJS, PrimeNG and Bootstrap and added Cypress end-to-end tests for key flows, reducing regression risk during releases. I also handled technical mentoring, code review and alignment with business goals in an Agile environment."
+      "scoplan": {
+        "role": "Fullstack Developer PHP/Symfony - React.js",
+        "company": "Adrware Consulting - Antananarivo, Madagascar",
+        "period": "09/2022 - Present",
+        "description": "Development of SCOPLAN (www.scoplan.com), a construction project management and tracking platform. Fullstack work on Symfony 3/4 and React.js, with Twig, jQuery, MySQL and REST APIs, in a Docker environment on Linux."
       },
-      "acca": {
-        "role": "Full Stack Developer",
-        "company": "ACCA Software S.p.A.",
-        "period": "2019 - 2023",
-        "description": "Developed the Angular and RxJS frontend of usBIM.com, a Kanban application for workflow management, using Angular Material and DevExpress. Integrated REST APIs with Node.js and Express.js, built real-time features with Socket.IO, and worked with MySQL for persistence in an Agile environment."
+      "myagency": {
+        "role": "PHP/Symfony Developer",
+        "company": "MyAgency - Antananarivo, Madagascar",
+        "period": "03/2022 - 09/2022",
+        "description": "Development of the IMMO project with Symfony 4 and API Platform. Designed and exposed REST APIs, MySQL persistence and Docker environment, applying TDD, SOLID and OOP."
+      },
+      "esokia": {
+        "role": "Web Developer",
+        "company": "Esokia - Antananarivo, Madagascar",
+        "period": "02/2021 - 05/2021",
+        "description": "Development of the ABANA marketplace (abana.mu) with Symfony 4, API Platform and React.js. Frontend integration in HTML5/CSS3, REST APIs and MySQL database in a containerised environment."
+      },
+      "freelance": {
+        "role": "Web Developer - Freelance",
+        "company": "Independent - Antananarivo, Madagascar",
+        "period": "02/2020 - 07/2022",
+        "description": "Designed and built the Trading, Teambuilding and S-Manager projects for direct clients. Symfony 4/5 stack with API Platform and React.js, MySQL database, Docker and REST APIs, from requirements gathering through to delivery."
       }
     }
   },
   "projects": {
     "label": "04 - Projects",
     "title": "Personal projects",
-    "angular": {
-      "description": "A reusable Angular boilerplate that demonstrates Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO and testing in a working application."
+    "crm": {
+      "description": "A customer relationship management application built with Symfony and API Platform: contact, opportunity and follow-up tracking, on a MySQL database behind a REST API."
     },
-    "requestLock": {
-      "description": "An Angular library for coordinating UI locking during concurrent HTTP requests, built with Signals, HttpContext and functional interceptors."
+    "travel": {
+      "description": "A travel platform built with Symfony and React.js: destination catalogue, booking and content management, backed by API Platform and MySQL."
     },
     "viewProject": "View project",
     "liveDemo": "Live demo",
@@ -141,32 +159,43 @@
     "label": "05 - Education",
     "title": "Education background",
     "items": {
-      "master": {
-        "title": "Master's Degree in AI Engineering",
-        "institution": "eCampus Digital School",
-        "period": "2025 - ongoing"
+      "ispm": {
+        "title": "Electronics, Computer Systems and Artificial Intelligence - BSc",
+        "institution": "Institut Supérieur Polytechnique de Madagascar (ISPM)",
+        "period": "2017 - 2020"
       },
-      "degree": {
-        "title": "Bachelor's Degree in Computer and Automation Engineering",
-        "institution": "eCampus Online University",
-        "period": "2022 - 2024"
+      "chemistry": {
+        "title": "Fundamentals of Chemistry - BSc",
+        "institution": "University of Antananarivo, Madagascar",
+        "period": "2014 - 2017"
       },
-      "diploma": {
-        "title": "IT Specialist Diploma",
-        "institution": "IISS Rinaldo D'Aquino, Montella",
-        "period": "2014 - 2019"
+      "baccalaureate": {
+        "title": "Scientific Baccalaureate - Series C",
+        "institution": "Lycée Philibert Tsiranana, Mahajanga, Madagascar",
+        "period": "2012 - 2013"
       }
     }
   },
   "contact": {
     "label": "06 - Contact",
     "title": "Let's talk about your next project",
-    "description": "I am available for collaborations as a frontend consultant, Angular developer or team leader."
+    "description": "I am available for fullstack development work with PHP/Symfony, React.js or Angular, as a freelancer or as part of a team.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "linkedinAria": "Contact Jerry Falimanana on LinkedIn (opens in a new tab)"
   },
   "footer": {
     "rights": "All rights reserved.",
     "built": "Built with Angular & Tailwind CSS",
     "sourceCode": "Source code",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "githubAria": "Jerry Falimanana on GitHub (opens in a new tab)",
+    "linkedinAria": "Jerry Falimanana on LinkedIn (opens in a new tab)"
+  },
+  "languages": {
+    "label": "Languages",
+    "french": "French - read, written and spoken (95%)",
+    "english": "English - read (95%), written (70%), spoken (60%)",
+    "malagasy": "Malagasy - native language"
   }
 }

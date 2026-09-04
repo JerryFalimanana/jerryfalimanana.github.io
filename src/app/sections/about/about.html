@@ -23,22 +23,22 @@
           </p>
         </div>
         <div
-          class="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4"
+          class="mt-8 pt-6 border-t border-line flex flex-wrap items-center justify-between gap-4"
         >
           <div
             class="inline-flex items-center gap-2 text-sm text-content-muted font-mono"
           >
             <span class="h-2 w-2 rounded-full bg-brand-400"></span>
-            <span>{{ profile.location }}</span>
+            <span>{{ profile.location | transloco }}</span>
           </div>
           <a
             [href]="profile.linkedin"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-accent-400 transition-colors hover:text-accent-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1"
-            aria-label="Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
+            [attr.aria-label]="'about.linkedinAria' | transloco"
           >
-            <span>LinkedIn Profile</span>
+            <span>{{ 'about.linkedinLabel' | transloco }}</span>
             <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -51,7 +51,7 @@
             class="card-highlight text-center lg:text-left flex flex-col justify-center"
           >
             <p
-              class="text-3xl sm:text-4xl font-extrabold font-display bg-gradient-to-r from-white via-brand-300 to-accent-300 bg-clip-text text-transparent"
+              class="text-3xl sm:text-4xl font-extrabold font-display bg-gradient-to-r from-content-primary via-brand-300 to-accent-300 bg-clip-text text-transparent"
             >
               {{ stat.value }}
             </p>
